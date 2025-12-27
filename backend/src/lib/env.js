@@ -1,9 +1,12 @@
 import dotenv from "dotenv";
+import path from "path";
 
-dotenv.config();
+dotenv.config({
+  path: path.resolve("src/.env"),
+});
 
 export const ENV = {
-    PORT : process.env.PORT,
-    DB_URL : process.env.DB_URL,
-
-}
+  PORT: process.env.PORT,
+  DB_URL: process.env.DB_URL,
+  NODE_ENV: process.env.NODE_ENV,
+};
